@@ -60,13 +60,13 @@ extern "C"
 /*!
  * Indicates if a random devnonce must be used or not
  */
-#define USE_RANDOM_DEV_NONCE                        0
+#define USE_RANDOM_DEV_NONCE                        1
 
 /*!
  * Indicates if JoinNonce is counter based and requires to be checked on 1.0.x devices
  * \remark Only applies to LoRaWAN 1.0.x when following recomendations provided
  *         by "Technical Recommendations for Preventing State Synchronization
- *         Issues around LoRaWAN® 1.0.x Join Procedure" 
+ *         Issues around LoRaWANï¿½ 1.0.x Join Procedure" 
  *         https://lora-alliance.org/wp-content/uploads/2020/11/lorawan-1.0.x-join-synch-issues-remedies-v1.0.0.pdf
  */
 #define USE_10X_JOIN_NONCE_COUNTER_CHECK            0

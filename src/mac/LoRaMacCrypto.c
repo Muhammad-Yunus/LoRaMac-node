@@ -36,6 +36,7 @@
 
 #include "utilities.h"
 #include "secure-element.h"
+#include "radio.h"
 
 #include "LoRaMacParser.h"
 #include "LoRaMacSerializer.h"
@@ -988,7 +989,7 @@ LoRaMacCryptoStatus_t LoRaMacCryptoPrepareJoinRequest( LoRaMacMessageJoinRequest
     // Add device nonce
 #if ( USE_RANDOM_DEV_NONCE == 1 )
     uint32_t devNonce = 0;
-    SecureElementRandomNumber( &devNonce );
+    devNonce = Radio.Random( );
     CryptoNvm->DevNonce = devNonce;
 #else
     CryptoNvm->DevNonce++;
